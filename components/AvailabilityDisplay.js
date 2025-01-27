@@ -9,7 +9,7 @@ const AvailabilityDisplay = ({ selectedDate }) => {
     const fetchData = async () => {
       try {
         if (selectedDate) { 
-          const response = await axios.get('http://localhost:3001/api/availability', { 
+          const response = await axios.get('https://table-booking-backend-7qpr.onrender.com/api/availability', { 
             params: { date: selectedDate } 
           }); 
           setAvailableSlots(response.data); 

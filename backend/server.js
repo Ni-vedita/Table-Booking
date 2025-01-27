@@ -6,6 +6,9 @@ const port = 10000;
 
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Backend API is running');
+});
 
 // In-memory storage for bookings (replace with a database)
 let bookings = [];
