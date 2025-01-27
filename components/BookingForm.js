@@ -20,7 +20,7 @@ const BookingForm = ({ onBookingSuccess }) => {
 
   const handleCheckAvailability = async () => {
     try {
-      const response = await axios.get('http://localhost:10000/api/availability', { 
+      const response = await axios.get('https://table-booking-backend-7qpr.onrender.com/api/availability', { 
         params: { date: formData.date } 
       });
       setAvailableSlots(response.data);
@@ -49,7 +49,7 @@ const BookingForm = ({ onBookingSuccess }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:10000/api/bookings', formData);
+      const response = await axios.post('https://table-booking-backend-7qpr.onrender.com/api/bookings', formData);
       onBookingSuccess(response.data);
     } catch (error) {
       console.error('Error booking table:', error);
