@@ -1,3 +1,4 @@
+import { fetchAvailableDates, bookTable } from '../utils/api';
 import { useState } from 'react';
 import BookingForm from '../components/BookingForm';
 import BookingSummary from '../components/BookingSummary';

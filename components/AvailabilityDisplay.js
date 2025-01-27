@@ -1,3 +1,4 @@
+import { fetchAvailableDates, bookTable } from '../utils/api';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
